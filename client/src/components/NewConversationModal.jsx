@@ -8,12 +8,11 @@ const NewConversationModal = ({ closeModal }) => {
   const { contacts } = useContacts();
   const { createConversation } = useConversations();
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
     createConversation(selectedContactIds);
     closeModal();
-  }
+  };
 
   const handleCheckboxChange = (contactId) => {
     setSelectedContactIds((prevSelectedContactIds) => {

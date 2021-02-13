@@ -7,12 +7,11 @@ const NewContactModal = ({ closeModal }) => {
   const nameRef = useRef();
   const { createContact } = useContacts();
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
     createContact(idRef.current.value, nameRef.current.value);
     closeModal();
-  }
+  };
 
   return (
     <>

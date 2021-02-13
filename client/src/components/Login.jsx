@@ -5,15 +5,15 @@ import { v4 as uuidV4 } from "uuid";
 const Login = ({ onIdSubmit }) => {
   const idRef = useRef();
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     onIdSubmit(idRef.current.value);
-  }
+  };
 
-  function createNewId() {
+  const createNewId = () => {
     onIdSubmit(uuidV4());
-  }
+  };
 
   return (
     <Container
